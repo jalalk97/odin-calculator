@@ -1,0 +1,129 @@
+/* @import url("https://fonts.cdnfonts.com/css/seven-segment"); */
+
+:root {
+  --clr-primary: #f69806;
+  --clr-neutral-100: #fff;
+  --clr-neutral-300: #9f9f9f;
+  --clr-neutral-400: #313131;
+  --clr-neutral-900: #000;
+
+  --ff-primary: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-primary), sans-serif;
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  /* width: 234px; */
+  /* height: 506px; */
+  flex: 0 1 auto;
+  width: 350px;
+  padding-inline: 1.5rem;
+  padding-top: 46.2451%; /* to maintain aspect-ratio */
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2.5rem;
+}
+
+.display-area {
+  font-size: 4.75rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
+  padding-right: 1.0625rem;
+  padding-bottom: 0.25rem;
+  letter-spacing: 0;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  font-size: inherit;
+  flex: 0 1 calc((100% - 3 * 0.75rem) / 4);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+
+.button-lrg {
+  flex-grow: 1;
+  border-radius: 30rem;
+  aspect-ratio: 3;
+  justify-content: flex-start;
+  padding-left: 1.75rem;
+}
+
+.bg-primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-100);
+}
+
+.bg-dark {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+}
+
+.bg-dark-gray {
+  background-color: var(--clr-neutral-400);
+  color: var(--clr-neutral-100);
+}
+
+.bg-light-gray {
+  background-color: var(--clr-neutral-300);
+  color: var(--clr-neutral-900);
+}
+
+.button.bg-primary {
+  font-size: 3rem;
+  font-weight: 500;
+  padding-bottom: 0.4rem;
+}
+
+button.bg-primary:hover {
+  background-color: #ffaf1d;
+}
+
+button.bg-primary:active {
+  background-color: #d67800;
+}
+
+button.bg-dark-gray:hover {
+  background-color: #515151;
+}
+
+button.bg-dark-gray:active {
+  background-color: #212121;
+}
+
+button.bg-light-gray:hover {
+  background-color: #bfbfbf;
+}
+
+button.bg-light-gray:active {
+  background-color: #6f6f6f;
+}
